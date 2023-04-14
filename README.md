@@ -1,1 +1,1 @@
-# profile-genetor-
+# profile-generator
