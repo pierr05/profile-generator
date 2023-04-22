@@ -6,7 +6,7 @@ inquirer.prompt([
     // manager prompts
     {
         type: 'name',
-        name: 'Manager',
+        name: 'manager',
         message: "Please enter the name of your team manager.",
         validate (value) {
             const isString = `/^[a-zA-Z]+$/`
@@ -27,75 +27,75 @@ inquirer.prompt([
     },
     {
         type: 'number',
-        name: 'ID:',
+        name: 'managerId',
         message: "Please, enter the employee ID your team manager!",
         filter: Number
     },
     {
         type: 'email',
-        name: 'Email:',
+        name: 'managerEmail',
         message: "Please, enter the email address of your team manager!",
     },
     {
         type: 'number',
-        name: 'Office Number:',
+        name: 'managerOffice',
         message: "Please enter the office number of your team manager."
     },
     {
         type: 'input',
-        name: 'GitHub:',
+        name: 'managerGitHub',
         message: "Please enter the GitHub username of your team manager."
     },
     // // engineer prompts
     {
         type: 'input',
-        name: 'Engineer',
+        name: 'engineer',
         message: "Please enter the name of your team engineer."
     },
     {
         type: 'input',
-        name: 'ID:',
+        name: 'engineerId',
         message: "Please enter the employee ID of your team engineer."
     },
     {
         type: 'input',
-        name: 'Email:',
+        name: 'engineerEmail',
         message: "Please enter the email address of your team engineer."
     },
     {
         type: 'input',
-        name: 'Office Number:',
+        name: 'engineerOffice',
         message: "Please enter the office number of your team engineer."
     },
     {
         type: 'input',
-        name: 'GitHub:',
+        name: 'engineerGitHub',
         message: "Please enter the GitHub username of your team engineer."
     },
     // intern prompts
     {
         type: 'input',
-        name: 'Intern',
+        name: 'intern',
         message: "Please enter the name of your team intern."
     },
     {
         type: 'number',
-        name: 'ID',
+        name: 'internId',
         message: "Please enter the employee ID of your team intern."
     },
     {
         type: 'email',
-        name: 'Email:',
+        name: 'internEmail',
         message: "Please enter the email address of your team intern."
     },
     {
         type: 'number',
-        name: 'Office Number:',
+        name: 'internOffice',
         message: "Please enter the office number of your team intern."
     },
     {
         type: 'input',
-        name: 'GitHub:',
+        name: 'internGitHub',
         message: "Please enter the GitHub username of your team intern."
     },
     // options
@@ -109,7 +109,7 @@ inquirer.prompt([
     // add another engineer 
     {
         type: 'input',
-        name: 'Engineer',
+        name: 'otherEngineer',
         message: "Please enter the name of your team engineer.",
         when: function(value) {
             return value.option == 'Add another engineer'
@@ -117,7 +117,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'ID:',
+        name: 'otherEngineerId',
         message: "Please enter the employee ID of your team engineer.",
         when: function(value) {
             return value.option == 'Add another engineer'
@@ -125,7 +125,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'Email:',
+        name: 'otherEngineerEmail',
         message: "Please enter the email address of your team engineer.",
         when: function(value) {
             return value.option == 'Add another engineer'
@@ -133,7 +133,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'Office Number:',
+        name: 'otherEngineerOffice',
         message: "Please enter the office number of your team engineer.",
         when: function(value) {
             return value.option == 'Add another engineer'
@@ -141,7 +141,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'GitHub:',
+        name: 'otherEngineerGitHub',
         message: "Please enter the GitHub username of your team engineer.",
         when: function(value) {
             return value.option == 'Add another engineer'
@@ -192,6 +192,6 @@ inquirer.prompt([
 ])
 .then(function(data) {
     fs.writeFile('./dist/index.html', `${htmlData(data)}`, (error) => {
-        error ? console.log(error) : console.log("Team profile is successfully created")
+        error ? console.log(error) : console.log("Success");
     })
-}); 
+});
