@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.document-header {
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgb(4, 36, 42);
+    height: 150px;
+    width: 100%;
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+}
+
+.backgroundcolor {
+    background-color: rgba(181, 131, 62, 0.221);
+}
+
+.move-card {
+    left: 325.3px;
+    position: relative;
+    top: -252px;
+}
+.move-card3 {
+    left: 650.6px;
+    position: relative;
+    top: -504px;
+}
+.move-card4 {
+    left: 976px;
+    position: relative;
+    top: -756px;
+}
